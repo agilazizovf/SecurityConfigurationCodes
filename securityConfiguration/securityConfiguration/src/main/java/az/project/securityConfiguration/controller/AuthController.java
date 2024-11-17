@@ -22,6 +22,7 @@ public class AuthController {
         return authService.authenticate(loginReq);
     }
 
+
     @PostMapping("/register")
     public void register(@RequestBody @Valid ClientRequest clientReq)  {
         authService.register(clientReq);

@@ -1,6 +1,6 @@
 package az.project.securityConfiguration.configuration;
 
-import az.project.blogposter.service.JwtUtil;
+import az.project.securityConfiguration.service.JwtUtil;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

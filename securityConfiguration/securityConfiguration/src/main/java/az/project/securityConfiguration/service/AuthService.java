@@ -62,7 +62,7 @@ public class AuthService {
         Client client = new Client();
         client.setUsername(clientReq.getUsername());
         client.setPassword(passwordEncoder.encode(clientReq.getPassword()));
-        Authority authority = new Authority("CLIENT");
+        Authority authority = new Authority("USER");
         Set<Authority> authoritySet = Set.of(authority);
         client.setAuthorities(authoritySet);
         clientRepository.save(client);

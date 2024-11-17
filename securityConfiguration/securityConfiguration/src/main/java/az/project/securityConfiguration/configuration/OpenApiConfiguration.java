@@ -11,9 +11,9 @@ import io.swagger.v3.oas.annotations.security.SecurityScheme;
 @OpenAPIDefinition(
         info = @Info(
                 contact = @Contact(
-                        name = "Aqil Azizov",
+                        name = "Agil Azizov",
                         email = "aqilazizov2005@gmail.com",
-                        url = "https://github.com/aqilazizovf"
+                        url = "https://github.com/agilazizovf"
                 ),
                 description = "example Security",
                 title = "security api",

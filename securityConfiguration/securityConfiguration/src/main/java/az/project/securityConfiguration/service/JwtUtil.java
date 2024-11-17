@@ -111,13 +111,9 @@ public class JwtUtil {
         }
     }
 
-
-
     public Integer getUserId(Claims claims){
         return (Integer) claims.get("user_id");
     }
-
-
 
     public Collection<GrantedAuthority> extractAuthorities(Claims claims) {
         Collection<GrantedAuthority> authorities = new ArrayList<>();
