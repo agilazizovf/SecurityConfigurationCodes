@@ -15,7 +15,7 @@ public class LoginRequest {
     @Pattern(regexp = "[A-Za-z0-9_.]+$")
     private String username;
 
-    @NotBlank(message = "Username cannot be empty or null")
+    @NotBlank(message = "Password cannot be empty or null")
     @Size(min = 3)
     @Pattern(regexp = "[A-Za-z0-9_.]+")
     private String password;
