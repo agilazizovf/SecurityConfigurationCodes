@@ -8,7 +8,7 @@ import lombok.ToString;
 
 @Data
 @ToString
-public class LoginRequest {
+public class AuthRequest {
 
     @NotBlank(message = "Username cannot be empty or null")
     @Size(max = 50)
