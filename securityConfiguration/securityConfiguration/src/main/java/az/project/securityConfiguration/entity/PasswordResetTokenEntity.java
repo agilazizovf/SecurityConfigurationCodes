@@ -26,6 +26,7 @@ public class PasswordResetTokenEntity {
 	@JoinColumn(name = "user_id", nullable = false)
 	@ManyToOne
 	private UserEntity user;
+
 	@Column(nullable = false)
 	private LocalDateTime expirationDate;
 }

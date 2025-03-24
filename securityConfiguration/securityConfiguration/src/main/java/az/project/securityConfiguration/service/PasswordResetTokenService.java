@@ -37,7 +37,7 @@ public class PasswordResetTokenService {
 					"Not associated", 422, null);
 		}
 		// Delete any existing token for the user
-		tokenRepository.deleteByUser_Username(user.get().getEmail());
+		tokenRepository.deleteByUser_Email(user.get().getEmail());
 		// Generate and save a new token with expiration date
 		String token = generateAndSaveActivationToken(currentUser.getEmail());
 		// Send the reset email

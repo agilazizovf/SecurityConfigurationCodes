@@ -11,13 +11,7 @@ VALUES
 
 -- Assign roles automatically based on user type
 INSERT INTO user_roles (user_id, role_id)
-SELECT u.id, r.id
-FROM users u
-         JOIN roles r ON r.admin = 1
-WHERE u.email = 'admin';
+select 1,id from roles where admin=1;
 
 INSERT INTO user_roles (user_id, role_id)
-SELECT u.id, r.id
-FROM users u
-         JOIN roles r ON r.client = 1
-WHERE u.email = 'client';
+select 2,id from roles where client=1;

@@ -10,13 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RoleRepository extends JpaRepository<RoleEntity, Long> {
 
-    @Transactional
+    @Query(value = "INSERT INTO user_roles (user_id, role_id) select ?1,id from roles where client=1", nativeQuery = true)
     @Modifying
-    @Query(value = """
-        INSERT INTO user_roles (user_id, role_id)
-        SELECT u.id, r.id FROM users u
-        JOIN roles r ON r.user = 1
-        WHERE u.email = ?1
-    """, nativeQuery = true)
-    void assignUserRoles(String username);
+    void assignClientRoles(String username);
 }
