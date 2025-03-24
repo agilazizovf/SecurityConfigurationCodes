@@ -16,7 +16,7 @@ public interface RoleRepository extends JpaRepository<RoleEntity, Long> {
         INSERT INTO user_roles (user_id, role_id)
         SELECT u.id, r.id FROM users u
         JOIN roles r ON r.user = 1
-        WHERE u.username = ?1
+        WHERE u.email = ?1
     """, nativeQuery = true)
     void assignUserRoles(String username);
 }
